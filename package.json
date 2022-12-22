@@ -1,0 +1,14 @@
+{
+  "name": "quiz_app",
+  "version": "1.0.0",
+  "description": "quiz app build with html, sass, javascript and api ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saeed Ali",
+  "license": "MIT",
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

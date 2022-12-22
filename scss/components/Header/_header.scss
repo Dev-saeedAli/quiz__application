@@ -1,0 +1,9 @@
+@use '../../mixins' as mixins;
+
+.header {
+    @include mixins.flexCenter(row);
+
+    h1 {
+        font-size: mixins.rem(32);
+    }
+}

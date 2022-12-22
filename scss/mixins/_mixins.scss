@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+$breakpoints-up : (
+    "medium" : 43.75em,
+    "large" : 56.25em,
+    "xlarge" : 90em
+);
+
+
+@mixin breakpoints($size) {
+   @media (min-width: (map-get($breakpoints-up, $size))) {
+    @content;
+   }
+}
+
+
+@function rem($unit){
+    @return math.div($unit, 16) + rem;
+}
