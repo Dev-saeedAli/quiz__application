@@ -1,14 +1,14 @@
 $bg-Color : hsl(222, 83%, 95%);
 $white : hsl(0, 0%, 100%);
-$light-Grey :hsl(20, 6%, 81%);
+$light-Grey :hsl(30, 2%, 58%);
 $light-Blue : hsl(195, 97%, 50%);
 $light-Red : hsl(349, 88%, 66%);
 $light-Orange : hsl(8, 74%, 69%);
-$dark-Blue : hsl(223, 83%, 62%);
+$dark-Blue : hsl(223, 87%, 64%);
 $Purple : hsl(260, 44%, 69%);
 $light-Purple :hsl(314, 77%, 86%);
 $correct : hsl(57, 98%, 43%);
-$wrong : hsl(15, 98%, 43%);
+$wrong : hsl(0, 100%, 66%);
 $Gradient-Red : linear-gradient(to right , $light-Red, $light-Orange);
 $Gradient-Blue : linear-gradient(to right , $light-Blue, $dark-Blue);
 $Gradient-Purple : linear-gradient(to right , $Purple, $light-Purple);

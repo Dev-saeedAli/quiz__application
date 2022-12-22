@@ -7,6 +7,8 @@
     <meta name="author" content="Mohammed Said Ali">
     <meta name="description" content="Quiz App that is made in Vanilla Javascript contains various difficulty levels and can be used in various screens such as mobile and desktop.">
     <meta name="keywords" content="Html, Css, Sass, Javascript">
+    <!-- Font family Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <!-- style sheet  -->
     <link rel="stylesheet" href="dist/style.css">
     <title>Quiz App</title>
@@ -17,9 +19,11 @@
 
             <!-- HEADER -->
             <header class="header">
-                <div class="header__brand"><h1>MyQuiz</h1></div>
+                <div class="header__brand">
+                    <h1>MyQuiz</h1>
+                </div>
                 <div class="header__categories">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
                     <form action="#">
                         <label for="category"></label>
                         <select name="category" id="category">
@@ -36,10 +40,81 @@
                     </form>
                 </div>
             </header>
+            <main class="game-container">
+                <div class="game-container__close none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                </div>
             <!-- Difficulty -->
-            <!-- Start  -->
-            <!-- Questions -->
+                <section class="difficulty">
+                    <div class="difficulty__header">
+                        <h2>Lets's Play</h2>
+                        <p>Be the first!</p>
+                    </div>
+                    <div class="difficulty__content">
+                        <!-- Card One -->
+                        <div class="difficulty__content--cards">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                            <p>level 1</p>
+                            <h3>Travel newbie</h3>
+                            <figure>
+                                <img src="images/newbie.png" alt="difficulty-level-1-image">
+                            </figure>
+                        </div>
+                        <!--x Card One x-->
+                        <!-- Card Two -->
+                        <div class="difficulty__content--cards">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                            <p>level 2</p>
+                            <h3>Junior</h3>
+                            <figure>
+                                <img src="images/junior.webp" alt="difficulty-level-2-image">
+                            </figure>
+                        </div>
+                        <!--x Card Two x-->
+                        <!-- Card Three -->
+                        <div class="difficulty__content--cards">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+                            <p>level 3</p>
+                            <h3>Experienced</h3>
+                            <figure>
+                                <img src="images/intermidiate.jpg" alt="difficulty-level-3-image">
+                            </figure>
+                        </div>
+                        <!--x Card Three x-->
 
+                        
+
+                    </div>
+                </section>
+                <!-- Start  -->
+                <section class="startGame none">
+                    <figure>
+                        <img src="images/junior.webp" alt="current-level-image">
+                    </figure>
+                    <div class="startGame__wrapper">
+                        <p class="startGame__wrapper--p1">level 2</p>
+                        <h3>Junior</h3>
+                        <p class="startGame__wrapper--p2">Do you feel confident? Here you'll challenge one of our most difficult travel questions!</p>
+                        <button class="startGame__wrapper--btn">Game</button>
+                    </div>
+                </section>
+                <!-- Questions -->
+                
+                <section class="questionContainer none">
+                    <figure>
+                        <img src="images/junior.webp" alt="question_image">
+                    </figure>
+                    <div class="questionContainer__wrapper">
+                        <p class="questionContainer__wrapper--p1">question 5 of 10</p>
+                        <h3 class="questionContainer__wrapper--p2">Which of the following is NOT a quote from the 1942 film Casablanca?</h3>
+                        <button class="questionContainer__wrapper--btn correct">Franky</button>
+                        <button class="questionContainer__wrapper--btn">Franky</button>
+                        <button class="questionContainer__wrapper--btn">Franky</button>
+                        <button class="questionContainer__wrapper--btn wrong">Franky</button>
+                    </div>
+                </section>
+            </main> 
+                
         </div>
     </div>
 

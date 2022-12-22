@@ -1,0 +1,59 @@
+@use '../../mixins' as function;
+@use '../../colors' as colors;
+
+.startGame {
+    background: colors.$dark-Blue;
+    padding: function.rem(10) 0 ;
+    min-height: 95vh;
+    display: grid;
+    place-content: center;
+    color: colors.$white;
+    user-select: none;
+
+    figure {
+        margin: 0 auto;
+        @include function.flexCenter(row);
+        margin: 0 0 function.rem(20);
+        
+    
+        img {
+            width: min(function.rem(150), function.rem(150));
+        }
+    }
+
+    &__wrapper {
+        padding: 0 function.rem(20);
+
+        &--p1 {
+            font-size: function.rem(18);
+        }
+        &--p2 {
+            font-size: function.rem(17);
+            padding: 0 function.rem(14) 0 0;
+            line-height: 1.7;
+            margin-bottom: function.rem(13);
+        }
+        h3 {
+            font-size: function.rem(22);
+            margin-bottom: function.rem(15);
+        }
+        &--btn {
+            display: inline-block;
+            width: 100%;
+            padding: function.rem(15) 0;
+            background: colors.$white;
+            color: colors.$dark-Blue;
+            outline: none;
+            box-shadow: unset;
+            border-radius: function.rem(30);
+            border: none;
+            font-size: function.rem(20);
+            font-weight: 550;
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 4px 5px 20px rgba(0,0,0,0.3);
+            }
+        }
+    }
+}

@@ -1,9 +1,44 @@
-@use '../../mixins' as mixins;
+@use '../../mixins' as function;
+@use '../../colors' as colors;
 
 .header {
-    @include mixins.flexCenter(row);
+    @include function.flexCenter(row);
+    justify-content: space-between;
+    padding: function.rem(10);
+    max-width: 100vw;
+    font-family: inherit;
+    box-shadow: function.rem(2) function.rem(4) function.rem(10) rgba(0,0,0,0.1);
 
-    h1 {
-        font-size: mixins.rem(32);
+    &__brand {
+
+        h1 {
+            font-size: function.rem(20);
+            color: colors.$light-Blue
+        }
+    }
+
+    &__categories {
+        @include function.flexCenter(row);
+        gap: function.rem(10);
+
+        svg {
+           width: function.rem(30);
+           border: function.rem(1) solid colors.$light-Grey;
+           padding: function.rem(3);
+           border-radius: function.rem(50);
+           fill: colors.$light-Blue;
+        }
+
+        form {
+            select {
+                border: function.rem(1) solid colors.$light-Blue;
+                box-shadow: none;
+                outline: none;
+                padding: function.rem(4);
+                font-size: function.rem(15);
+                font-family: inherit;
+                font-weight: 400;
+            }
+        }
     }
 }

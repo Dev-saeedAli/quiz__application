@@ -1,0 +1,88 @@
+@use '../../mixins' as function;
+@use '../../colors' as colors;
+
+
+.difficulty {
+    padding: function.rem(10) 0;
+    margin: function.rem(10);
+    user-select: none;
+
+   //header 
+    &__header {
+        margin-bottom: function.rem(20);
+        h2 {
+            font-weight: 600;
+            font-size: function.rem(20);
+            color: colors.$light-Red;
+        }
+
+        p {
+            font-size: function.rem(16);
+            color: colors.$light-Grey;
+            font-weight: 500;
+        }
+    }
+
+    //cards-container
+    &__content {
+        display: grid;
+        gap: 50px;
+        
+        //cards
+        &--cards {
+            padding: function.rem(10) function.rem(10) ;
+            background: linear-gradient(to right, colors.$light-Red, colors.$light-Orange 80%);
+            border-radius: function.rem(40);
+            position: relative;
+            min-height: min(function.rem(170));
+            height: auto;
+            display: grid;
+            align-content: center;
+            margin: function.rem(13) 0;
+            color: colors.$white;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            
+            &:nth-child(2) {
+                background: linear-gradient(to right, colors.$dark-Blue, colors.$light-Blue 80%);
+            }
+            &:last-child {
+                background: linear-gradient(to right, colors.$Purple, colors.$light-Purple 80%);
+                figure {
+                    img  {
+                        width: min(200px, 200px);
+                        right: 5px;
+                } 
+             }
+            }
+
+            svg {
+                width: function.rem(30);
+                border: function.rem(1) solid colors.$white;
+                padding: function.rem(10);
+                color: colors.$white;
+                border-radius: function.rem(50);
+                fill: colors.$white;
+            }
+            p {
+                font-size: function.rem(16);
+            }
+
+            h3 {
+                font-size: function.rem(20);
+                font-weight: 550;
+            }
+
+            figure {
+                img {
+                    width: min(130px, 130px);
+                    position: absolute;
+                    top: -30px;
+                    right: 20px;
+                    background: transparent;
+                }
+            }
+        }
+    }
+    
+}

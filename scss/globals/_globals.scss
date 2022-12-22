@@ -1,3 +1,7 @@
+@use '../mixins' as functions;
+@use '../fonts' as font;
+@use '../colors' as colors;
+
 *,
 *::before,
 *::after {
@@ -28,3 +32,41 @@ h6 {
 p {
     margin-top: 0;
 }
+
+.container {
+    max-width: functions.rem(1200);
+    margin: 0 auto;
+    font-family: font.$fonts;
+}
+
+.game-container {
+    margin: 0 auto;
+    min-height: 100vh;
+
+        // game-container close button which only exists in both startGame and questionContainer
+        &__close {
+            @include functions.flexCenter(row);
+            justify-content: space-between;
+            padding: functions.rem(10);
+            font-family: inherit;
+            background: colors.$dark-Blue;
+        
+            svg {
+                fill: colors.$white;
+                width: functions.rem(30);
+                border: functions.rem(1) solid colors.$white;
+                padding: functions.rem(10);
+                border-radius: functions.rem(50);
+                cursor: pointer;
+            }
+        }
+
+    @include functions.breakpoints (medium) {
+        max-width: functions.rem(700);
+    }
+}
+
+.none {
+    display: none !important;
+}
+
