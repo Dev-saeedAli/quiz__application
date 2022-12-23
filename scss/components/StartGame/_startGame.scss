@@ -10,7 +10,7 @@
     color: colors.$white;
     user-select: none;
 
-    figure {
+    &__figure {
         margin: 0 auto;
         @include function.flexCenter(row);
         margin: 0 0 function.rem(20);

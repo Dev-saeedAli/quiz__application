@@ -28,31 +28,33 @@
                         <label for="category"></label>
                         <select name="category" id="category">
                             <option value="" >-- Categories --</option>
-                            <option value="sports">Sports</option>
-                            <option value="elebrties">Celebrties</option>
-                            <option value="generalknowledge">General Knowledge</option>
-                            <option value="computers">Computers</option>
-                            <option value="mathematics">Mathematics</option>
-                            <option value="television">Television</option>
-                            <option value="television">Comics</option>
-                            <option value="television">Film</option>
+                            <option value="sports" data-id="21">Sports</option>
+                            <option value="elebrties" data-id="26">Celebrties</option>
+                            <option value="generalknowledge" data-id="9">General Knowledge</option>
+                            <option value="computers" data-id="18">Computers</option>
+                            <option value="mathematics" data-id="19">Mathematics</option>
+                            <option value="television" data-id="14">Television</option>
+                            <option value="television" data-id="29">Comics</option>
+                            <option value="television" data-id="11">Film</option>
                         </select>
                     </form>
                 </div>
             </header>
             <main class="game-container">
                 <div class="game-container__close none">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+                    <div class="next">Next</div>
                 </div>
+
             <!-- Difficulty -->
-                <section class="difficulty none">
+                <section class="difficulty">
                     <div class="difficulty__header">
                         <h2>Lets's Play</h2>
                         <p>Be the first!</p>
                     </div>
                     <div class="difficulty__content">
                         <!-- Card One -->
-                        <div class="difficulty__content--cards">
+                        <div class="difficulty__content--cards" data-level="easy">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
                             <p>level 1</p>
                             <h3>Travel newbie</h3>
@@ -62,7 +64,7 @@
                         </div>
                         <!--x Card One x-->
                         <!-- Card Two -->
-                        <div class="difficulty__content--cards">
+                        <div class="difficulty__content--cards" data-level="medium">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
                             <p>level 2</p>
                             <h3>Junior</h3>
@@ -72,7 +74,7 @@
                         </div>
                         <!--x Card Two x-->
                         <!-- Card Three -->
-                        <div class="difficulty__content--cards">
+                        <div class="difficulty__content--cards" data-level="hard">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
                             <p>level 3</p>
                             <h3>Experienced</h3>
@@ -88,7 +90,7 @@
                 </section>
                 <!-- Start  -->
                 <section class="startGame none">
-                    <figure>
+                    <figure class="startGame__figure">
                         <img src="images/junior.webp" alt="current-level-image">
                     </figure>
                     <div class="startGame__wrapper">
@@ -100,18 +102,20 @@
                 </section>
                 <!-- Questions -->
                 
-                <section class="questionContainer">
+                <section class="questionContainer none">
                     <figure>
                         <img src="images/junior.webp" alt="question_image">
                     </figure>
                     <div class="questionContainer__wrapper">
-                        <p class="questionContainer__wrapper--p1">question 5 of 10</p>
-                        <h3 class="questionContainer__wrapper--p2">Which of the following is NOT a quote from the 1942 film Casablanca?</h3>
-                        <button class="questionContainer__wrapper--btn correct">Franky</button>
-                        <button class="questionContainer__wrapper--btn">Franky</button>
-                        <button class="questionContainer__wrapper--btn">Franky</button>
-                        <button class="questionContainer__wrapper--btn wrong">Franky</button>
-                    </div>
+                        <p class="questionContainer__wrapper--p1"></p>
+                        <h3 class="questionContainer__wrapper--p2"></h3>
+                        <!-- Generating with js  -->
+                        <!-- <button class="questionContainer__wrapper--btn">Franky</button>
+                             <button class="questionContainer__wrapper--btn">Franky</button>
+                             <button class="questionContainer__wrapper--btn">Franky</button>
+                             <button class="questionContainer__wrapper--btn">Franky</button> -->
+                        <!--x Generating with js x -->
+                        </div>
                 </section>
             </main> 
                 

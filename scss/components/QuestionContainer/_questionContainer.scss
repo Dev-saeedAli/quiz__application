@@ -1,20 +1,12 @@
 @use '../../mixins' as function;
 @use '../../colors' as colors;
+@use '../StartGame' as *; // we are using the extend keyword to take the style from the actual startgame component
 
 .questionContainer {
-    background: colors.$dark-Blue;
-    padding: function.rem(10) 0 ;
-    min-height: 95vh;
-    display: grid;
-    place-content: center;
-    color: colors.$white;
-    user-select: none;
+    @extend .startGame;
 
     figure {
-        margin: 0 auto;
-        @include function.flexCenter(row);
-        margin: 0 0 function.rem(20);
-        
+       @extend .startGame__figure;
     
         img {
             width: min(function.rem(150), function.rem(150));
@@ -32,20 +24,9 @@
             margin-bottom: function.rem(15);
         }
         &--btn {
-            margin: function.rem(7) 0;
-            display: inline-block;
-            width: 100%;
-            padding: function.rem(15) 0;
-            background: colors.$white;
-            color: colors.$dark-Blue;
-            outline: none;
-            box-shadow: unset;
-            border-radius: function.rem(30);
-            border: none;
-            font-size: function.rem(20);
-            font-weight: 550;
-            transition: all .3s ease;
-            cursor: pointer;
+          @extend .startGame__wrapper--btn;
+          margin: function.rem(7) 0;
+         
             &:hover {
                 box-shadow: 4px 5px 20px rgba(0,0,0,0.3);
             }
