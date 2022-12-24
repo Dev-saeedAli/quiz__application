@@ -16,7 +16,6 @@
 <body>
     <div class="container">
         <div class="game">
-
             <!-- HEADER -->
             <header class="header">
                 <div class="header__brand">
@@ -29,10 +28,10 @@
                         <select name="category" id="category">
                             <option value="" >-- Categories --</option>
                             <option value="sports" data-id="21">Sports</option>
-                            <option value="elebrties" data-id="26">Celebrties</option>
+                            <option value="videogames" data-id="15">Video Games</option>
                             <option value="generalknowledge" data-id="9">General Knowledge</option>
                             <option value="computers" data-id="18">Computers</option>
-                            <option value="mathematics" data-id="19">Mathematics</option>
+                            <option value="history" data-id="23">History</option>
                             <option value="television" data-id="14">Television</option>
                             <option value="television" data-id="29">Comics</option>
                             <option value="television" data-id="11">Film</option>
@@ -42,8 +41,11 @@
             </header>
             <main class="game-container">
                 <div class="game-container__close none">
+                   <div class="game-container--options">
                     <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
-                    <div class="next">Next</div>
+                    <span class="timer" data-timer="10">10</span>
+                    <span class="next">Next</span>
+                   </div>
                 </div>
 
             <!-- Difficulty -->
@@ -59,7 +61,7 @@
                             <p>level 1</p>
                             <h3>Travel newbie</h3>
                             <figure>
-                                <img src="images/newbie.png" alt="difficulty-level-1-image">
+                                <img loading="lazy" src="images/newbie.jpg" alt="difficulty-level-1-image">
                             </figure>
                         </div>
                         <!--x Card One x-->
@@ -69,7 +71,7 @@
                             <p>level 2</p>
                             <h3>Junior</h3>
                             <figure>
-                                <img src="images/junior.webp" alt="difficulty-level-2-image">
+                                <img loading="lazy" src="images/junior.jpg" alt="difficulty-level-2-image">
                             </figure>
                         </div>
                         <!--x Card Two x-->
@@ -79,7 +81,7 @@
                             <p>level 3</p>
                             <h3>Experienced</h3>
                             <figure>
-                                <img src="images/intermidiate.jpg" alt="difficulty-level-3-image">
+                                <img loading="lazy" src="images/intermidiate.jpg" alt="difficulty-level-3-image">
                             </figure>
                         </div>
                         <!--x Card Three x-->
@@ -91,12 +93,12 @@
                 <!-- Start  -->
                 <section class="startGame none">
                     <figure class="startGame__figure">
-                        <img src="images/junior.webp" alt="current-level-image">
+                        <img loading="lazy" class="startGameImg" src="images/junior.webp" alt="current-level-image">
                     </figure>
                     <div class="startGame__wrapper">
-                        <p class="startGame__wrapper--p1">level 2</p>
-                        <h3>Junior</h3>
-                        <p class="startGame__wrapper--p2">Do you feel confident? Here you'll challenge one of our most difficult travel questions!</p>
+                        <p class="startGame__wrapper--p1"></p>
+                        <h3></h3>
+                        <p class="startGame__wrapper--p2"></p>
                         <button class="startGame__wrapper--btn">Game</button>
                     </div>
                 </section>
@@ -104,7 +106,7 @@
                 
                 <section class="questionContainer none">
                     <figure>
-                        <img src="images/junior.webp" alt="question_image">
+                        <img loading="lazy" class="questionContainerImg" src="images/junior.jpg" alt="question_image">
                     </figure>
                     <div class="questionContainer__wrapper">
                         <p class="questionContainer__wrapper--p1"></p>

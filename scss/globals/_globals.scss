@@ -43,8 +43,9 @@ p {
     margin: 0 auto;
     min-height: 100vh;
 
+
         // game-container close button which only exists in both startGame and questionContainer
-        &__close {
+        &--options{
             @include functions.flexCenter(row);
             justify-content: space-between;
             padding: functions.rem(10);
@@ -58,7 +59,27 @@ p {
                 padding: functions.rem(10);
                 border-radius: functions.rem(50);
                 cursor: pointer;
+                // &::before {
+                //     content: '';
+                //     width: 20px;
+                //     height: 4px;
+                //     background: red;
+                // }
             }
+            
+            .timer {
+                color: colors.$white;
+                padding: functions.rem(5) functions.rem(10);
+                cursor: pointer;
+                border: functions.rem(5) solid colors.$border;
+                border-radius: functions.rem(50);
+            }
+
+            .next {
+                font-size: 1.1rem;
+                color: colors.$white;
+                cursor: pointer;
+            } 
         }
 
     @include functions.breakpoints (medium) {
