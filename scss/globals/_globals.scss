@@ -59,12 +59,6 @@ p {
                 padding: functions.rem(10);
                 border-radius: functions.rem(50);
                 cursor: pointer;
-                // &::before {
-                //     content: '';
-                //     width: 20px;
-                //     height: 4px;
-                //     background: red;
-                // }
             }
             
             .timer {
@@ -89,5 +83,21 @@ p {
 
 .none {
     display: none !important;
+}
+
+@keyframes moveRight{
+    from {
+        transform: translateX(-200px);
+    }to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn{
+    from {
+       opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
 

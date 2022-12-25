@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "quiz app build with html, sass, javascript and api ",
   "main": "script.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "font-awesome": "^4.7.0"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
   }
 }

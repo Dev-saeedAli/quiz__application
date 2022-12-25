@@ -4,28 +4,35 @@
 
 .questionContainer {
     @extend .startGame;
-
-    figure {
-       @extend .startGame__figure;
+    animation: fadeIn 1s ease;
     
+    figure {
+        @extend .startGame__figure;
+        
+        
         img {
             width: min(function.rem(150), function.rem(150));
+            animation: fadeIn 1s ease;
         }
     }
 
     &__wrapper {
         padding: 0 function.rem(20);
+        animation: fadeIn 1s ease;       
 
         &--p1 {
             font-size: function.rem(18);
+            animation: fadeIn 1s ease;
         }
         h3 {
             font-size: function.rem(22);
             margin-bottom: function.rem(15);
+            animation: fadeIn 1s ease;
         }
         &--btn {
           @extend .startGame__wrapper--btn;
           margin: function.rem(7) 0;
+          animation: fadeIn 1s ease;
          
             &:hover {
                 box-shadow: 4px 5px 20px rgba(0,0,0,0.3);

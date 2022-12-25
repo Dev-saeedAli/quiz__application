@@ -9,6 +9,7 @@
     place-content: center;
     color: colors.$white;
     user-select: none;
+    animation: fadeIn 1s ease;
 
     &__figure {
         margin: 0 auto;
@@ -23,19 +24,27 @@
 
     &__wrapper {
         padding: 0 function.rem(20);
+            animation: fadeIn 1s ease;
+
 
         &--p1 {
             font-size: function.rem(18);
+            animation: fadeIn 1s ease;
+
         }
         &--p2 {
             font-size: function.rem(17);
             padding: 0 function.rem(14) 0 0;
             line-height: 1.7;
             margin-bottom: function.rem(13);
+            animation: fadeIn 1s ease;
+
         }
         h3 {
             font-size: function.rem(22);
             margin-bottom: function.rem(15);
+            animation: fadeIn 1s ease;
+
         }
         &--btn {
             display: inline-block;
@@ -51,9 +60,12 @@
             font-weight: 550;
             transition: all .3s ease;
             cursor: pointer;
+            animation: fadeIn 1s ease;
+
             &:hover {
                 box-shadow: 4px 5px 20px rgba(0,0,0,0.3);
             }
         }
     }
 }
+
