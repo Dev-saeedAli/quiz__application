@@ -116,6 +116,7 @@ nextBtn.addEventListener("click", ()=> {
             className: "success",
             close: true,
             duration : "4000",
+            position: "center",
             style: {
               background: "hsl(57, 98%, 43%)",
               fontSize : "17px"
@@ -230,6 +231,7 @@ const checkIfSelected = () => {
         className: "error",
         close: true,
         duration : "2000",
+        position: "center",
         style: options
       }).showToast();
     isSelected = false;
